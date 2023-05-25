@@ -12,7 +12,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/style.css">
     <title>Valve</title>
-    
 </head>
 <body class="antialiased">
     @include('navigation-menu')
