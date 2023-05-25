@@ -11,9 +11,6 @@
                     
         <!-- Styles -->
         <link rel="stylesheet" href="/style.css">
-        
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <title>Valve</title>
     </head>
