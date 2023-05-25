@@ -12,6 +12,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/', function () {
+        return view('layouts.app');
+    })->name('app');
+});
+
+
 
 Route::get('/login', function () {
     return view('auth.login');
@@ -22,14 +33,3 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::view('/app', 'layouts.app');
-
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/', function () {
-        return view('layouts.app');
-    })->name('app');
-});
