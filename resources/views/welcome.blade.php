@@ -14,6 +14,10 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body class="antialiased">
-        
+        @include('navigation-menu')
+
+        <div class="container">
+            @yield('content')
+        </div>
     </body>
 </html>
