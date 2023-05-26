@@ -26,3 +26,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+// Commentaar om push te testen
